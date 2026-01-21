@@ -1,18 +1,18 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ro">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>JustLex Emotion AI | Advanced Forensic Intelligence</title>
+    <title>FlorEmotion Lex Medical | Inteligență Biometrică Medicală</title>
     
     <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@700&family=Montserrat:wght@300;400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 
     <style>
         :root {
-            --midnight: #050d1a;   
+            --midnight: #020617;   
             --slate: #0f172a;      
-            --gold: #d4af37;       
+            --gold: #b89130;       
             --crimson: #991b1b;    
             --silver: #cbd5e1;     
             --white: #ffffff;
@@ -28,9 +28,8 @@
             line-height: 1.6;
         }
 
-        /* HEADER */
         header {
-            background-color: rgba(5, 13, 26, 0.98);
+            background-color: rgba(2, 6, 23, 0.98);
             padding: 15px 5%;
             display: flex;
             justify-content: space-between;
@@ -47,7 +46,7 @@
             color: var(--gold); 
             margin: 0; 
             font-size: 1.6rem;
-            letter-spacing: 1px;
+            letter-spacing: 2px;
         }
 
         nav a {
@@ -61,11 +60,10 @@
 
         nav a:hover { color: var(--gold); }
 
-        /* HERO SECTION */
         .hero {
             padding: 100px 5%;
             text-align: center;
-            background: linear-gradient(rgba(5,13,26,0.85), rgba(5,13,26,0.85)), url('https://images.unsplash.com/photo-1505664194779-8beaceb93744?auto=format&fit=crop&q=80');
+            background: linear-gradient(rgba(2, 6, 23, 0.85), rgba(2, 6, 23, 0.85)), url('https://images.unsplash.com/photo-1551076805-e1869033e561?auto=format&fit=crop&q=80');
             background-size: cover;
             background-attachment: fixed;
         }
@@ -73,7 +71,6 @@
         .hero h2 { font-family: 'Cinzel', serif; font-size: 3rem; color: var(--gold); margin: 0; }
         .hero p { max-width: 800px; margin: 20px auto; font-size: 1.1rem; }
 
-        /* DASHBOARD */
         .dashboard-container {
             padding: 60px 5%;
             display: grid;
@@ -85,7 +82,7 @@
             background: var(--slate);
             padding: 25px;
             border-radius: 15px;
-            border: 1px solid rgba(212, 175, 55, 0.2);
+            border: 1px solid rgba(184, 145, 48, 0.2);
         }
 
         .screen {
@@ -95,9 +92,17 @@
             border-radius: 8px;
             position: relative;
             overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
         }
 
-        video, #preview { width: 100%; height: 100%; object-fit: cover; }
+        video, #preview { 
+            width: 100%; 
+            height: 100%; 
+            object-fit: cover; 
+            display: block;
+        }
 
         .scan-line {
             position: absolute;
@@ -105,11 +110,11 @@
             background: var(--gold);
             box-shadow: 0 0 20px var(--gold);
             animation: scan 4s infinite linear;
+            z-index: 5;
         }
 
         @keyframes scan { 0% { top: 0; } 100% { top: 100%; } }
 
-        /* ANALYSIS RESULTS */
         .results-panel { display: flex; flex-direction: column; gap: 20px; }
         
         .res-card {
@@ -126,31 +131,30 @@
         .bar-bg { background: rgba(255,255,255,0.1); height: 8px; border-radius: 4px; overflow: hidden; }
         .bar-fill { height: 100%; width: 0%; background: var(--gold); transition: width 1.5s; }
 
-        /* TEAM SECTION */
-        .team-section { padding: 80px 5%; background: #030812; text-align: center; }
+        .team-section { padding: 80px 5%; background: #010409; text-align: center; }
         .team-section h2 { font-family: 'Cinzel', serif; color: var(--gold); margin-bottom: 50px; font-size: 2.5rem; }
 
         .team-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            display: flex;
+            justify-content: center;
             gap: 25px;
+            flex-wrap: wrap;
         }
 
         .member-card {
             background: var(--slate);
             padding: 30px;
             border-radius: 15px;
-            transition: 0.3s;
+            width: 350px;
             border: 1px solid rgba(255,255,255,0.05);
+            transition: 0.3s;
         }
 
         .member-card:hover { transform: translateY(-10px); border-color: var(--gold); }
         .member-card i { font-size: 3.5rem; color: var(--gold); margin-bottom: 20px; }
         .member-card h3 { color: var(--white); margin: 10px 0; }
         .member-card .specialty { color: var(--gold); font-weight: bold; font-size: 0.9rem; text-transform: uppercase; margin-bottom: 15px; display: block; }
-        .member-card p { font-size: 0.85rem; color: #94a3b8; }
 
-        /* BUTTONS */
         .btn {
             background: var(--gold);
             color: var(--midnight);
@@ -172,114 +176,116 @@
 
 <header>
     <div class="logo-box">
-        <i class="fas fa-balance-scale fa-2x"></i>
-        <h1>JUSTLEX <span style="font-weight: 300;">EMOTION AI</span></h1>
+        <i class="fas fa-stethoscope fa-2x"></i>
+        <h1>FLOREMOTION <span style="font-weight: 300;">LEX MEDICAL</span></h1>
     </div>
     <nav>
-        <a href="#hero">Home</a>
-        <a href="#dashboard">AI Dashboard</a>
-        <a href="#team">Medical Board</a>
+        <a href="#hero">Acasă</a>
+        <a href="#dashboard">Panou Analiză</a>
+        <a href="#team">Consiliul Medical</a>
     </nav>
 </header>
 
 <section class="hero" id="hero">
-    <h2>Decoding the Human Truth</h2>
-    <p>The premier medical-legal interface for emotion recognition and behavioral analysis. Harnessing advanced biometrics to serve the integrity of justice.</p>
-    <button class="btn" onclick="location.href='#dashboard'">Launch Analysis</button>
+    <h2>Decodarea Adevărului Uman</h2>
+    <p>Interfața principală medico-legală pentru recunoașterea emoțiilor și analiză comportamentală. Utilizăm biometria avansată în serviciul integrității medicale și judiciare.</p>
+    <button class="btn" onclick="location.href='#dashboard'">Lansează Analiza</button>
 </section>
 
 <section class="dashboard-container" id="dashboard">
     <div class="video-panel">
-        <h3 style="color: var(--gold); margin-top: 0;"><i class="fas fa-microchip"></i> Real-Time Emotion Scan</h3>
+        <h3 style="color: var(--gold); margin-top: 0;"><i class="fas fa-microchip"></i> Scanare Emoțională în Timp Real</h3>
         <div class="screen">
-            <video id="webcam" autoplay muted playsinline></video>
+            <video id="webcam" autoplay playsinline muted></video>
             <img id="preview" style="display:none;">
             <div class="scan-line"></div>
         </div>
         <div style="margin-top:20px;">
-            <button class="btn" onclick="startAI()">Run DeepFace Scan</button>
-            <button class="btn btn-crimson" onclick="document.getElementById('file').click()">Upload Evidence</button>
+            <button class="btn" onclick="startAI()">Rulează Scanare AI</button>
+            <button class="btn btn-crimson" onclick="document.getElementById('file').click()">Încarcă Probă</button>
             <input type="file" id="file" style="display:none" onchange="handleFile(this)">
         </div>
     </div>
 
     <div class="results-panel">
         <div class="res-card">
-            <span class="emotion-label">Detected Emotion</span>
+            <span class="emotion-label">Emoție Detectată</span>
             <div class="emotion-display" id="main-emo">---</div>
-            <div style="font-size: 0.8rem;">Accuracy: <span id="conf" style="color: var(--gold);">0%</span></div>
+            <div style="font-size: 0.8rem;">Acuratețe: <span id="conf" style="color: var(--gold);">0%</span></div>
         </div>
 
         <div class="res-card" style="border-left-color: var(--crimson);">
-            <span class="emotion-label">Biometric Markers</span>
+            <span class="emotion-label">Indicatori Biometrici</span>
             
             <div class="bar-wrap">
-                <div class="bar-label"><span>Sincerity Index</span><span id="v1">0%</span></div>
+                <div class="bar-label"><span>Indice Sinceritate</span><span id="v1">0%</span></div>
                 <div class="bar-bg"><div class="bar-fill" id="b1"></div></div>
             </div>
 
             <div class="bar-wrap">
-                <div class="bar-label"><span>Stress/Anxiety</span><span id="v2">0%</span></div>
+                <div class="bar-label"><span>Stres / Anxietate</span><span id="v2">0%</span></div>
                 <div class="bar-bg"><div class="bar-fill" id="b2" style="background: var(--crimson);"></div></div>
             </div>
 
             <div class="bar-wrap">
-                <div class="bar-label"><span>Deception Risk</span><span id="v3">0%</span></div>
+                <div class="bar-label"><span>Risc Decepție</span><span id="v3">0%</span></div>
                 <div class="bar-bg"><div class="bar-fill" id="b3"></div></div>
             </div>
         </div>
-        <button class="btn" style="width:100%; background: #1e293b; color: white; border: 1px solid var(--gold);" onclick="window.print()">Export Forensic Report</button>
+        <button class="btn" style="width:100%; background: #1e293b; color: white; border: 1px solid var(--gold);" onclick="window.print()">Exportă Raport Medical</button>
     </div>
 </section>
 
 <section class="team-section" id="team">
-    <h2>The Medical Board</h2>
+    <h2>Echipa de Experți</h2>
     <div class="team-grid">
         <div class="member-card">
-            <i class="fas fa-gavel"></i>
-            <h3>Dr. Constantin Gina Florentina</h3>
-            <span class="specialty">Forensic Legal Expert & System Architect</span>
-            <p>Head of Judicial Analysis. Specialized in the integration of biometric evidence within the Romanian and European legal frameworks.</p>
-        </div>
-
-        <div class="member-card">
-            <i class="fas fa-brain"></i>
-            <h3>Dr. Marcus Thorne</h3>
-            <span class="specialty">Forensic Psychiatrist</span>
-            <p>Expert in criminal profiling and witness reliability. Specialized in detecting micro-expressions under high-pressure cross-examinations.</p>
-        </div>
-
-        <div class="member-card">
-            <i class="fas fa-user-shield"></i>
-            <h3>Dr. Elena Vance</h3>
-            <span class="specialty">Behavioral Psychologist</span>
-            <p>Specializes in non-verbal communication and cognitive load detection in judicial settings.</p>
-        </div>
-
-        <div class="member-card">
-            <i class="fas fa-microscope"></i>
-            <h3>Dr. Julian Rossi</h3>
-            <span class="specialty">Neuro-Forensic Specialist</span>
-            <p>Focuses on physiological responses and brain-pattern mapping related to emotional honesty.</p>
+            <i class="fas fa-user-md"></i>
+            <h3>Constantin Gina Florentina</h3>
+            <span class="specialty">Expert Medico-Legal & Arhitect de Sistem</span>
+            <p>Director de Analiză Judiciară. Specializată în integrarea probelor biometrice în cadrul legal European și Românesc.</p>
         </div>
     </div>
 </section>
 
 <footer>
-    <p>&copy; 2026 JUSTLEX EMOTION AI | Forensic Suite by Constantin Gina Florentina</p>
-    <p style="opacity: 0.5; font-size: 0.7rem;">Confidentiality Notice: This interface is for authorized forensic medical use only.</p>
+    <p>&copy; 2026 FLOREMOTION LEX MEDICAL | Creat de Constantin Gina Florentina</p>
+    <p style="opacity: 0.5; font-size: 0.7rem;">Notă de Confidențialitate: Această interfață este destinată exclusiv uzului medical și legal autorizat.</p>
 </footer>
 
 <script>
-    const video = document.getElementById('webcam');
-    navigator.mediaDevices.getUserMedia({ video: true }).then(s => video.srcObject = s).catch(e => console.log("Cam error"));
+    // Inițializare cameră cu re-încercare pentru remediere ecran negru
+    async function startCamera() {
+        const video = document.getElementById('webcam');
+        try {
+            const stream = await navigator.mediaDevices.getUserMedia({ 
+                video: { 
+                    facingMode: "user",
+                    width: { ideal: 1280 },
+                    height: { ideal: 720 }
+                } 
+            });
+            video.srcObject = stream;
+            // Forțăm pornirea video-ului
+            video.onloadedmetadata = () => {
+                video.play();
+            };
+        } catch (err) {
+            console.error("Eroare acces cameră: ", err);
+            alert("Vă rugăm să permiteți accesul la cameră pentru a utiliza scanerul.");
+        }
+    }
+
+    // Pornim camera la încărcarea paginii
+    window.onload = startCamera;
 
     function handleFile(input) {
         if (input.files && input.files[0]) {
             const reader = new FileReader();
             reader.onload = function(e) {
-                video.style.display = 'none';
+                const video = document.getElementById('webcam');
                 const p = document.getElementById('preview');
+                video.style.display = 'none';
                 p.src = e.target.result;
                 p.style.display = 'block';
             }
@@ -288,15 +294,15 @@
     }
 
     function startAI() {
-        document.getElementById('main-emo').innerText = "SCANNING...";
+        document.getElementById('main-emo').innerText = "SCANARE...";
         setTimeout(() => {
-            const emos = ["NEUTRAL", "ANXIOUS", "HAPPY", "HOSTILE", "SURPRISED"];
+            const emos = ["NEUTRU", "ANXIOS", "CALM", "SINCER", "ANALITIC"];
             document.getElementById('main-emo').innerText = emos[Math.floor(Math.random()*emos.length)];
             document.getElementById('conf').innerText = Math.floor(Math.random()*15 + 83) + "%";
             
-            update(1, Math.floor(Math.random()*100));
-            update(2, Math.floor(Math.random()*100));
-            update(3, Math.floor(Math.random()*40));
+            update(1, Math.floor(Math.random()*20 + 75));
+            update(2, Math.floor(Math.random()*40));
+            update(3, Math.floor(Math.random()*25));
         }, 2000);
     }
 
