@@ -1,11 +1,11 @@
-# ⚖️ JustLex Emotion AI: Advanced Forensic Suite
-### *The Intersection of Behavioral Science and Judicial Integrity*
+# ⚖️ FlorEmotion Lex: Medical-Judicial Analytics
+### *Advanced Biometric Emotion Recognition for Forensic Psychiatry*
 
 ![Version](https://img.shields.io/badge/version-3.1.0-gold)
 ![License](https://img.shields.io/badge/license-MIT-blue)
-![Role](https://img.shields.io/badge/Expert-Constantin%20Gina%20Florentina-crimson)
+![Expert](https://img.shields.io/badge/Expert-Dr.%20Florentina%20Gina-gold)
 
-**JustLex Emotion AI** is a cutting-edge forensic platform designed to bridge the gap between clinical observation and judicial truth. Developed by **Dr. Constantin Gina Florentina**, this system utilizes biometric analysis and AI-driven emotion recognition to assist legal experts and forensic psychiatrists in validating witness credibility and detecting emotional stress levels.
+**FlorEmotion Lex** is a specialized forensic platform designed to bridge the gap between clinical observation and judicial truth. Developed by **Dr. Florentina Gina**, this system utilizes biometric analysis and AI-driven emotion recognition to assist legal experts and forensic psychiatrists in validating witness credibility and detecting emotional stress levels.
 
 ---
 
@@ -13,38 +13,38 @@
 
 ### 1. Multi-Modal Forensic Input
 * **Live Emotion Feed:** Real-time facial scanning via high-definition camera stream with active biometric markers.
-* **Laboratory Analysis:** Post-event evaluation of uploaded visual evidence (stills/photos) for formal medical reports.
+* **Laboratory Analysis:** Post-event evaluation of uploaded visual evidence for formal medical-legal reports.
 
 ### 2. Emotion Recognition Architecture
 The system categorizes complex emotional states crucial for legal testimony:
 * **Sincerity & Neutral State:** Establishing the psychological baseline for truthful responses.
 * **High-Stress & Anxiety Detection:** Identifying cognitive load and autonomic nervous system responses.
-* **Deception Risk Mapping:** Advanced analysis of micro-expressions linked to hostility or hidden distress.
+* **Judicial Credibility Mapping:** Advanced analysis of micro-expressions linked to hidden distress or behavioral anomalies.
 
-### 3. Judicial Reporting & Ethics
-* **One-Click Forensic Reports:** Instant PDF generation of biometric data for judicial evidence.
+### 3. Medical-Legal Reporting
+* **Forensic Export:** Instant generation of biometric data summaries for judicial evidence.
 * **Bio-Ethical Compliance:** Built with strict adherence to data privacy and medical-legal ethics.
 
 ---
 
-## 🩺 The Medical Board
-This platform is backed by an elite multidisciplinary team:
-* **Dr. Constantin Gina Florentina:** Chief System Architect & Forensic Legal Expert.
-* **Dr. Marcus Thorne:** Forensic Psychiatrist (Behavioral Profiling).
-* **Dr. Elena Vance:** Behavioral Psychologist (Cognitive Load Specialist).
+## 🩺 The Forensic Medical Board
+This platform is backed by an elite multidisciplinary expertise:
+* **Dr. Florentina Gina:** Chief Medical-Judicial Expert & System Architect.
+* **Forensic Psychiatry Dept:** Specialized in Behavioral Profiling and Witness Reliability.
+* **Judicial Ethics Lab:** Ensuring compliance with modern legal and medical standards.
 
 ---
 
 ## 🛠️ Deployment Instructions
-1.  **Clone** this repository to your local machine.
-2.  Ensure `index.html` is in the root directory.
-3.  Activate **GitHub Pages** in Settings > Pages to launch the live dashboard.
+1.  **Repository:** Ensure `index.html` is in the root directory.
+2.  **Activation:** Go to **Settings > Pages** on GitHub.
+3.  **Launch:** Select the `main` branch and `/(root)` folder to go live.
 
 ---
 
 ## ⚖️ Ethical Disclaimer
 *This tool is intended as a clinical support system for certified forensic experts. All AI-generated findings must be correlated with professional psychiatric evaluations and legal scrutiny.*
 
-**Author:** Constantin Gina Florentina  
-**Project:** JustLex Emotion AI Forensic Suite  
+**Author:** Dr. Florentina Gina  
+**Project:** FlorEmotion Lex Analytics  
 **Year:** 2026
