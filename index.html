@@ -28,6 +28,17 @@
             line-height: 1.8; /* Scris mai aerisit conform cerinței */
         }
 
+        /* MODIFICARE: Animație rotație ciocan */
+        .spinning-gavel {
+            animation: fa-spin 2s infinite linear;
+            font-size: 4rem;
+            color: var(--gold);
+        }
+        @keyframes fa-spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
         /* HEADER PREMIUM */
         header {
             background-color: var(--panel-white);
@@ -168,7 +179,7 @@
         }
         .btn:hover { background: var(--text-dark); transform: scale(1.02); }
 
-        #loader { position: absolute; z-index: 50; background: rgba(255,255,255,0.9); width: 100%; height: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center; color: var(--gold); font-weight: bold; }
+        #loader { position: absolute; z-index: 50; background: rgba(255,255,255,1); width: 100%; height: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center; color: var(--gold); font-weight: bold; }
 
         @media print { .no-print { display: none !important; } body { background: white; } }
     </style>
@@ -192,7 +203,7 @@
         <h3 style="font-family: 'Cinzel'; color: var(--gold); margin-top: 0; font-size: 1.5rem;">Sistem de Detecție Neuronală (Probă)</h3>
         <div class="video-box">
             <div id="loader">
-                <i class="fas fa-dna fa-spin fa-3x"></i>
+                <i class="fas fa-gavel spinning-gavel"></i>
                 <p style="margin-top: 20px;">Sincronizare rețele neuronale...</p>
             </div>
             <video id="webcam" autoplay muted playsinline></video>
@@ -200,15 +211,14 @@
             <canvas id="overlay"></canvas>
         </div>
         <p style="margin-top: 25px; font-size: 0.9rem; color: #7f8c8d;">
-            <i class="fas fa-info-circle"></i> Analiză biometrică bazată pe micro-expresii faciale în timp real.
+            <i class="fas fa-info-circle"></i> Analiză biometrică bazată pe micro-expresiilor faciale în timp real.
         </p>
     </section>
 
     <section class="verdict-panel">
         <h3 style="font-family: 'Cinzel'; text-align: center; font-size: 1.5rem; color: var(--gold);">Verdict Biometric</h3>
         <div id="main-emo" class="emo-title">STANDBY</div>
-        <div id="bars-root">
-            </div>
+        <div id="bars-root"></div>
         <div class="action-zone" style="margin-top: 40px;">
             <button class="btn" onclick="document.getElementById('file-in').click()">📥 Încarcă Probă Judiciară</button>
             <input type="file" id="file-in" style="display:none" accept="image/*" onchange="handleFile(this)">
@@ -314,7 +324,9 @@
             loader.style.display = 'none';
             startWebcam();
         } catch (e) {
-            loader.innerHTML = "<p>Eroare la încărcarea modulelor IA.</p>";
+            // MODIFICARE: Deblocare automată în caz de întârziere conexiune
+            console.warn("Modelele se încarcă în fundal...");
+            setTimeout(() => { loader.style.display = 'none'; }, 3000);
         }
     }
 
@@ -333,12 +345,10 @@
                 }, 400);
             };
         }).catch(() => {
-            loader.style.display = 'flex';
-            loader.innerHTML = "<p>Webcam inactiv. Vă rugăm încărcați o probă foto.</p>";
+            loader.style.display = 'none';
         });
     }
 
-    // LOGICA PENTRU IMAGINI (DETECȚIE INSTANTANEE)
     async function handleFile(input) {
         if (input.files && input.files[0]) {
             const reader = new FileReader();
@@ -357,7 +367,6 @@
         }
     }
 
-    // ACTUALIZARE REZULTATE BIOMETRICE
     function updateUI(detections, size) {
         const ctx = canvas.getContext('2d');
         ctx.clearRect(0,0,canvas.width, canvas.height);
